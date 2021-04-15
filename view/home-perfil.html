@@ -33,7 +33,7 @@
         .corpo {
             /* width: 80%; */
             /* margin: 5% auto;
-            padding: 10px; */
+padding: 10px; */
             background-color: #fff;
             display: grid;
             padding: 2em;
@@ -190,6 +190,10 @@ color:@calendar-color;
         .today {
             text-align: center;
         }
+        
+        fieldset {
+            border: none;
+        }
     </style>
 </head>
 
@@ -202,10 +206,9 @@ color:@calendar-color;
         </ul>
         <!-- USUÁRIO -->
         <div id="test-swipe-1">
-            <div class="row" style="background-color: white; padding-bottom: 20px;">
-
-                <div class="col s6" style="min-height: 400px; background-color: ;">
-                    <!-- Conteúdo Esquerdo -->
+            <div class="row" style=" min-height: 400px; background-color: white;">
+                <!-- Conteúdo Esquerdo -->
+                <div class="col s6">
                     <div class="col s12">
                         <h1 class="col s10 offset-s1" style="font-size: 24px; ">Horário</h1>
                         <div class="row">
@@ -219,9 +222,9 @@ color:@calendar-color;
                             </div>
                         </div>
                     </div>
+
                     <div class="col s12">
-                        <!-- <button id="btnPrev" type="button">Prev</button>
-                        <button id="btnNext" type="button">Next</button>-->
+                        <!-- <button id="btnPrev" type="button">Prev</button><button id="btnNext" type="button">Next</button>-->
                         <h1 class="col s10 offset-s1" style="font-size: 24px; margin-top: 0px;">Calendário</h1>
                         <div id="divCal" class="col s10 offset-s1"></div>
                     </div>
@@ -274,339 +277,302 @@ color:@calendar-color;
 
                 </div>
 
+            </div>
+        </div>
 
+        <!-- PERFIL -->
+        <div id="test-swipe-2">
+            <div class="row" style="min-height: 400px;margin-left: 0px;margin-right: 0px;">
 
-                <!-- PERFIL -->
-                <div id="test-swipe-2" class="col s12">
-                    <div class="corpo">
-                        <!--<div class="file-field input-field">
-<img id="img-register-person" src=""/>
+                <div style="padding: 20px;">
+                    <div class="col s6 push-s3" style="border: 1px solid coral; margin: ; padding: 10px;background-color: white; border-radius: 5px;">
+                        <form>
+                            <div class="row">
+                                <fieldset>
+                                    <legend>Usuário</legend>
+                                    <div class="input-field col m7">
+                                        <i class="material-icons prefix">person</i>
+                                        <input id="first_name" type="text" class="validate">
+                                        <label for="first_name">Nome</label>
+                                    </div>
+                                    <div class="input-field col s5">
+                                        <input id="last_name" type="text" class="validate">
+                                        <label for="last_name">Sobrenome</label>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Contato</legend>
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">alternate_email</i>
+                                        <input id="email" type="email" class="validate">
+                                        <label for="email">E-mail</label>
+                                        <p class="col s10 push-s2">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span>Alerta por e-mail</span>
+                                            </label>
+                                        </p>
+                                    </div>
 
-<div class="btn" style="width: 150px">
-<span>new photo</span>
-<input type="file" id="file" />
-</div>
-<div class="file-path-wrapper">
-<input
-class="file-path validate"
-type="text"
-id="value-img"
-style="display: none"
-/>
-</div>
-</div> 
--->
-                        <div class="row">
-                            <div class="col s5" style="background-color: rgb(249, 255, 192);">
-                                <!-- Grey navigation panel -->
-                                <div class="form-user row">
-                                    <form class="col s8">
-                                        <div class="row">
-                                            <fieldset>
-                                                <legend>Usuário</legend>
-                                                <div class="input-field col m7">
-                                                    <i class="material-icons prefix">person</i>
-                                                    <input id="first_name" type="text" class="validate">
-                                                    <label for="first_name">Nome</label>
-                                                </div>
-                                                <div class="input-field col s5">
-                                                    <input id="last_name" type="text" class="validate">
-                                                    <label for="last_name">Sobrenome</label>
-                                                </div>
-                                            </fieldset>
-                                            <fieldset>
-                                                <legend>Contato</legend>
-                                                <div class="input-field col s12">
-                                                    <i class="material-icons prefix">alternate_email</i>
-                                                    <input id="email" type="email" class="validate">
-                                                    <label for="email">E-mail</label>
-                                                    <p class="col offset-l2 ">
-                                                        <label>
-<input type="checkbox" />
-<span>Alerta por e-mail</span>
-</label>
-                                                    </p>
-                                                </div>
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">phone</i>
+                                        <input id="icon_telephone" type="tel" class="validate">
+                                        <label for="icon_telephone">Telefone</label>
+                                        <p class=" col s10 push-s2">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span>Tenho Whatsapp</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Endereço</legend>
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">home</i>
+                                        <input id="cep" type="text" class="validate">
+                                        <label for="cep">CEP</label>
 
-                                                <div class="input-field col s12">
-                                                    <i class="material-icons prefix">phone</i>
-                                                    <input id="icon_telephone" type="tel" class="validate">
-                                                    <label for="icon_telephone">Telefone</label>
-                                                    <p class=" col offset-l2 ">
-                                                        <label>
-<input type="checkbox" />
-<span>Tenho Whatsapp</span>
-</label>
-                                                    </p>
-
-                                                </div>
-                                            </fieldset>
-                                            <fieldset>
-                                                <legend>Endereço</legend>
-                                            </fieldset>
-                                        </div>
-                                        <div class="row">
-
-                                        </div>
-                                        <button class="btn waves-effect waves-light offset-s2" type="submit" name="action">Submit
-<i class="material-icons right">send</i>
-</button>
-                                    </form>
-                                </div>
+                                    </div>
+                                </fieldset>
                             </div>
-                            <div class="col s7" style="background-color: pink;">
-                                <!-- Teal page content  -->
-                            </div>
-                        </div>
+                            <button class="btn waves-effect waves-light offset-s2" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </form>
                     </div>
                 </div>
-
-                <!-- SOBRE NÓS -->
-                <div id="test-swipe-3" class="col s12 red">
-                    documentos e fotos para docuemtentaçao do sistema
-                </div>
             </div>
 
-            <!-- mostras un modal informando, si quiere mudar el estado actual del alarme -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <p>Tem certeza que deseja ligar o alarme</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="#test-swipe-1" class="modal-close waves-effect waves-green btn-flat" id="aceitar-ligar">ACEITAR</a>
+        </div>
 
-                    <a href="#test-swipe-2" class="modal-close waves-effect waves-green btn-flat" id="cancelar-ligar">CANCELAR</a>
-                </div>
+        <!-- SOBRE NÓS -->
+        <div id="test-swipe-3">
+            <div class="row" style="min-height: 400px;background-color: white;margin-left: 0px;margin-right: 0px;">
             </div>
-            <!-- SGV 20210304 Mostrar el modal para desligar o alarme -->
-            <div id="modal2" class="modal">
-                <div class="modal-content">
-                    <p>Tem certeza que deseja desligar o alarme</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="#test-swipe-1" class="modal-close waves-effect waves-green btn-flat" id="aceitar-desligar">ACEITAR</a>
+        </div>
+        <!--FIM SITE-->
+    </div>
+    </div>
 
-                    <a href="#test-swipe-2" class="modal-close waves-effect waves-green btn-flat" id="cancelar-desligar">CANCELAR</a>
-                </div>
-            </div>
+    <!-- JavaScrip - Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../style/jquery-ui-1.12.1.custom/jquery-3.5.1.min.js"></script>
+    <script src="../style/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../style/materialize/js/materialize.min.js"></script>
+    <script src="../style/materialize/js/materialize.js"></script>
 
-            <!-- JavaScrip - Jquery -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            <script src="../style/jquery-ui-1.12.1.custom/jquery-3.5.1.min.js"></script>
-            <script src="../style/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-            <script src="../style/materialize/js/materialize.min.js"></script>
-            <script src="../style/materialize/js/materialize.js"></script>
-
-            <script>
-                $(document).ready(function() {
-                    $(".materialboxed").materialbox();
-                    $(".modal").modal();
-                    $(".parallax").parallax();
-                    $(".tabs").tabs();
-                    // SGV 20201207 Show a preview of the image that was placed
-                    $("#file").change(function() {
-                        if (this.files && this.files[0]) {
-                            var reader = new FileReader();
-                            reader.onload = function(e) {
-                                $("#img-register-person").attr("src", e.target.result);
-                            };
-                            reader.readAsDataURL(this.files[0]);
-                        }
-                    });
-                });
-
-                // SGV 20210403 Mudar e verificar el estado do alarme
-                $("#checkbox").on("click", function() {
-                    var stateAlarm = $("#checkbox")[0].checked;
-                    if (stateAlarm == true) {
-                        $("#modal1").modal("open", "#modal1");
-                        $("#aceitar-ligar").on("click", function() {
-                            $("#checkbox").prop("checked", true);
-                        });
-                        $("#cancelar-ligar").on("click", function() {
-                            $("#checkbox").prop("checked", false);
-                        });
-                    } else {
-                        $("#modal2").modal("open", "#modal2");
-                        $("#aceitar-desligar").on("click", function() {
-                            $("#checkbox").prop("checked", false);
-                        });
-                        $("#cancelar-desligar").on("click", function() {
-                            $("#checkbox").prop("checked", true);
-                        });
-                    }
-                });
-                /*
-                 *  funçao que se executara um ajax para comunicaçao com server
-                 *  @param
-                 *  @return
-                 *
-                 */
-                function CommunicationWithServer() {}
-
-                var Cal = function(divId) {
-                    //Store div id
-                    this.divId = divId;
-
-                    // Days of week, starting on Sunday
-                    this.DaysOfWeek = ["dom", "seg", "ter", "qua", "quin", "sex", "sab"];
-
-                    // Months, stating on January
-                    this.Months = [
-                        "January",
-                        "February",
-                        "March",
-                        "April",
-                        "May",
-                        "June",
-                        "July",
-                        "August",
-                        "September",
-                        "October",
-                        "November",
-                        "December",
-                    ];
-
-                    // Set the current month, year
-                    var d = new Date();
-
-                    this.currMonth = d.getMonth();
-                    this.currYear = d.getFullYear();
-                    this.currDay = d.getDate();
-                };
-
-                // Goes to next month
-                Cal.prototype.nextMonth = function() {
-                    if (this.currMonth == 11) {
-                        this.currMonth = 0;
-                        this.currYear = this.currYear + 1;
-                    } else {
-                        this.currMonth = this.currMonth + 1;
-                    }
-                    this.showcurr();
-                };
-
-                // Goes to previous month
-                Cal.prototype.previousMonth = function() {
-                    if (this.currMonth == 0) {
-                        this.currMonth = 11;
-                        this.currYear = this.currYear - 1;
-                    } else {
-                        this.currMonth = this.currMonth - 1;
-                    }
-                    this.showcurr();
-                };
-
-                // Show current month
-                Cal.prototype.showcurr = function() {
-                    this.showMonth(this.currYear, this.currMonth);
-                };
-
-                // Show month (year, month)
-                Cal.prototype.showMonth = function(y, m) {
-                    var d = new Date(),
-                        // First day of the week in the selected month
-                        firstDayOfMonth = new Date(y, m, 1).getDay(),
-                        // Last day of the selected month
-                        lastDateOfMonth = new Date(y, m + 1, 0).getDate(),
-                        // Last day of the previous month
-                        lastDayOfLastMonth =
-                        m == 0 ?
-                        new Date(y - 1, 11, 0).getDate() :
-                        new Date(y, m, 0).getDate();
-
-                    var html = "<table>";
-
-                    // Write selected month and year
-                    html += "<thead><tr>";
-                    html +=
-                        '<td class="mes" colspan="7">' + this.Months[m] + " " + y + "</td>";
-                    html += "</tr></thead>";
-
-                    // Write the header of the days of the week
-                    html += '<tr class="days">';
-                    for (var i = 0; i < this.DaysOfWeek.length; i++) {
-                        html += '<td class ="dias">' + this.DaysOfWeek[i] + "</td>";
-                    }
-                    html += "</tr>";
-
-                    // Write the days
-                    var i = 1;
-                    do {
-                        var dow = new Date(y, m, i).getDay();
-
-                        // If Sunday, start new row
-                        if (dow == 0) {
-                            html += "<tr>";
-                        }
-                        // If not Sunday but first day of the month
-                        // it will write the last days from the previous month
-                        else if (i == 1) {
-                            html += "<tr>";
-                            var k = lastDayOfLastMonth - firstDayOfMonth + 1;
-                            for (var j = 0; j < firstDayOfMonth; j++) {
-                                html += '<td class="not-current">' + k + "</td>";
-                                k++;
-                            }
-                        }
-
-                        // Write the current day in the loop
-                        var chk = new Date();
-                        var chkY = chk.getFullYear();
-                        var chkM = chk.getMonth();
-                        if (
-                            chkY == this.currYear &&
-                            chkM == this.currMonth &&
-                            i == this.currDay
-                        ) {
-                            html += '<td class="today">' + i + "</td>";
-                        } else {
-                            html += '<td class="normal">' + i + "</td>";
-                        }
-                        // If Saturday, closes the row
-                        if (dow == 6) {
-                            html += "</tr>";
-                        }
-                        // If not Saturday, but last day of the selected month
-                        // it will write the next few days from the next month
-                        else if (i == lastDateOfMonth) {
-                            var k = 1;
-                            for (dow; dow < 6; dow++) {
-                                html += '<td class="not-current">' + k + "</td>";
-                                k++;
-                            }
-                        }
-
-                        i++;
-                    } while (i <= lastDateOfMonth);
-
-                    // Closes table
-                    html += "</table>";
-
-                    // Write HTML to the div
-                    document.getElementById(this.divId).innerHTML = html;
-                };
-
-                // On Load of the window
-                window.onload = function() {
-                    // Start calendar
-                    var c = new Cal("divCal");
-                    c.showcurr();
-
-                    // Bind next and previous button clicks
-                    // getId('btnNext').onclick = function() {
-                    //   c.nextMonth();
-                    // };
-                    // getId('btnPrev').onclick = function() {
-                    //   c.previousMonth();
-                    // };
-                };
-
-                // Get element by id
-                function getId(id) {
-                    return document.getElementById(id);
+    <script>
+        $(document).ready(function() {
+            $(".materialboxed").materialbox();
+            $(".modal").modal();
+            $(".parallax").parallax();
+            $(".tabs").tabs();
+            // SGV 20201207 Show a preview of the image that was placed
+            $("#file").change(function() {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $("#img-register-person").attr("src", e.target.result);
+                    };
+                    reader.readAsDataURL(this.files[0]);
                 }
-            </script>
+            });
+        });
+
+        // SGV 20210403 Mudar e verificar el estado do alarme
+        $("#checkbox").on("click", function() {
+            var stateAlarm = $("#checkbox")[0].checked;
+            if (stateAlarm == true) {
+                $("#modal1").modal("open", "#modal1");
+                $("#aceitar-ligar").on("click", function() {
+                    $("#checkbox").prop("checked", true);
+                });
+                $("#cancelar-ligar").on("click", function() {
+                    $("#checkbox").prop("checked", false);
+                });
+            } else {
+                $("#modal2").modal("open", "#modal2");
+                $("#aceitar-desligar").on("click", function() {
+                    $("#checkbox").prop("checked", false);
+                });
+                $("#cancelar-desligar").on("click", function() {
+                    $("#checkbox").prop("checked", true);
+                });
+            }
+        });
+        /*
+         *  funçao que se executara um ajax para comunicaçao com server
+         *  @param
+         *  @return
+         *
+         */
+        function CommunicationWithServer() {}
+
+        var Cal = function(divId) {
+            //Store div id
+            this.divId = divId;
+
+            // Days of week, starting on Sunday
+            this.DaysOfWeek = ["dom", "seg", "ter", "qua", "quin", "sex", "sab"];
+
+            // Months, stating on January
+            this.Months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ];
+
+            // Set the current month, year
+            var d = new Date();
+
+            this.currMonth = d.getMonth();
+            this.currYear = d.getFullYear();
+            this.currDay = d.getDate();
+        };
+
+        // Goes to next month
+        Cal.prototype.nextMonth = function() {
+            if (this.currMonth == 11) {
+                this.currMonth = 0;
+                this.currYear = this.currYear + 1;
+            } else {
+                this.currMonth = this.currMonth + 1;
+            }
+            this.showcurr();
+        };
+
+        // Goes to previous month
+        Cal.prototype.previousMonth = function() {
+            if (this.currMonth == 0) {
+                this.currMonth = 11;
+                this.currYear = this.currYear - 1;
+            } else {
+                this.currMonth = this.currMonth - 1;
+            }
+            this.showcurr();
+        };
+
+        // Show current month
+        Cal.prototype.showcurr = function() {
+            this.showMonth(this.currYear, this.currMonth);
+        };
+
+        // Show month (year, month)
+        Cal.prototype.showMonth = function(y, m) {
+            var d = new Date(),
+                // First day of the week in the selected month
+                firstDayOfMonth = new Date(y, m, 1).getDay(),
+                // Last day of the selected month
+                lastDateOfMonth = new Date(y, m + 1, 0).getDate(),
+                // Last day of the previous month
+                lastDayOfLastMonth =
+                m == 0 ?
+                new Date(y - 1, 11, 0).getDate() :
+                new Date(y, m, 0).getDate();
+
+            var html = "<table>";
+
+            // Write selected month and year
+            html += "<thead><tr>";
+            html +=
+                '<td class="mes" colspan="7">' + this.Months[m] + " " + y + "</td>";
+            html += "</tr></thead>";
+
+            // Write the header of the days of the week
+            html += '<tr class="days">';
+            for (var i = 0; i < this.DaysOfWeek.length; i++) {
+                html += '<td class ="dias">' + this.DaysOfWeek[i] + "</td>";
+            }
+            html += "</tr>";
+
+            // Write the days
+            var i = 1;
+            do {
+                var dow = new Date(y, m, i).getDay();
+
+                // If Sunday, start new row
+                if (dow == 0) {
+                    html += "<tr>";
+                }
+                // If not Sunday but first day of the month
+                // it will write the last days from the previous month
+                else if (i == 1) {
+                    html += "<tr>";
+                    var k = lastDayOfLastMonth - firstDayOfMonth + 1;
+                    for (var j = 0; j < firstDayOfMonth; j++) {
+                        html += '<td class="not-current">' + k + "</td>";
+                        k++;
+                    }
+                }
+
+                // Write the current day in the loop
+                var chk = new Date();
+                var chkY = chk.getFullYear();
+                var chkM = chk.getMonth();
+                if (
+                    chkY == this.currYear &&
+                    chkM == this.currMonth &&
+                    i == this.currDay
+                ) {
+                    html += '<td class="today">' + i + "</td>";
+                } else {
+                    html += '<td class="normal">' + i + "</td>";
+                }
+                // If Saturday, closes the row
+                if (dow == 6) {
+                    html += "</tr>";
+                }
+                // If not Saturday, but last day of the selected month
+                // it will write the next few days from the next month
+                else if (i == lastDateOfMonth) {
+                    var k = 1;
+                    for (dow; dow < 6; dow++) {
+                        html += '<td class="not-current">' + k + "</td>";
+                        k++;
+                    }
+                }
+
+                i++;
+            } while (i <= lastDateOfMonth);
+
+            // Closes table
+            html += "</table>";
+
+            // Write HTML to the div
+            document.getElementById(this.divId).innerHTML = html;
+        };
+
+        // On Load of the window
+        window.onload = function() {
+            // Start calendar
+            var c = new Cal("divCal");
+            c.showcurr();
+
+            // Bind next and previous button clicks
+            // getId('btnNext').onclick = function() {
+            //   c.nextMonth();
+            // };
+            // getId('btnPrev').onclick = function() {
+            //   c.previousMonth();
+            // };
+        };
+
+        // Get element by id
+        function getId(id) {
+            return document.getElementById(id);
+        }
+    </script>
+
 </body>
 
 </html>
