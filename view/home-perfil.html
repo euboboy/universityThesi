@@ -200,8 +200,7 @@ color:@calendar-color;
 <body>
     <div class="father-is-body">
         <ul id="tabs-swipe-demo" class="tabs">
-            <li class="tab col s3"><a href="#test-swipe-1">usuario</a></li>
-            <li class="tab col s3"><a href="#test-swipe-2" class="active">perfil</a></li>
+            <li class="tab col s3"><a href="#test-swipe-1" class="active">usuario</a></li>
             <li class="tab col s3"><a href="#test-swipe-3">quem somos</a></li>
         </ul>
         <!-- USUÁRIO -->
@@ -235,6 +234,77 @@ color:@calendar-color;
                         <img width="300px" style="margin: auto;" class="materialboxed" src="../style/img/pessoa-sorrindo.jpeg" />
                     </div>
                     <div class="col s6 offset-s3" style="background-color: ;">
+                        <div>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">editar perfil</a>
+
+                            <!-- Modal Structure -->
+                            <div id="modal1" class="modal">
+                                <div class="">
+                                    <!--FORMULÁRIO-->
+                                    <div class="col s6 push-s3 modal-content" style="border: 1px solid coral; padding: 10px;background-color: white; border-radius: 5px;">
+                                        <form>
+                                            <div class="row">
+                                                <fieldset>
+                                                    <legend>Usuário</legend>
+                                                    <div class="input-field col m7">
+                                                        <i class="material-icons prefix" small: "6rem">person</i>
+                                                        <input id="first_name" type="text" class="validate">
+                                                        <label for="first_name">Nome</label>
+                                                    </div>
+                                                    <div class="input-field col s5">
+                                                        <input id="last_name" type="text" class="validate">
+                                                        <label for="last_name">Sobrenome</label>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <legend>Contato</legend>
+                                                    <div class="input-field col s12" style="background-color: ;">
+                                                        <i class="material-icons prefix">alternate_email</i>
+                                                        <input id="email" type="email" class="validate">
+                                                        <label for="email">E-mail</label>
+                                                        <div class="col s10 push-s2">
+                                                            <label>
+                                                        <input type="checkbox" />
+                                                        <span>Receber alertas</span>
+                                                    </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="input-field col s12">
+                                                        <i class="material-icons prefix">phone</i>
+                                                        <input id="icon_telephone" type="tel" class="validate">
+                                                        <label for="icon_telephone">Telefone</label>
+                                                        <div class="col s10 push-s2">
+                                                            <label>
+                                                        <input type="checkbox" />
+                                                        <span>Contato via WhatsApp</span>
+                                                    </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <legend>Endereço</legend>
+                                                    <div class="input-field col s12">
+                                                        <i class="material-icons prefix">home</i>
+                                                        <input id="cep" type="text" class="validate">
+                                                        <label for="cep">CEP</label>
+
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                                <i class="material-icons right">send</i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
                         <div class="switch" style="padding: 10px 20px; text-align: center">
                             <h5>Alarme</h5>
                             <label>
@@ -244,8 +314,8 @@ color:@calendar-color;
                                 On
                             </label>
                         </div>
-
                     </div>
+
 
                     <div class="col s10 offset-s1">
                         <table class="highlight">
@@ -278,72 +348,6 @@ color:@calendar-color;
                 </div>
 
             </div>
-        </div>
-
-        <!-- PERFIL -->
-        <div id="test-swipe-2">
-            <div class="row" style="min-height: 400px;margin-left: 0px;margin-right: 0px;">
-
-                <div style="padding: 20px;">
-                    <div class="col s6 push-s3" style="border: 1px solid coral; margin: ; padding: 10px;background-color: white; border-radius: 5px;">
-                        <form>
-                            <div class="row">
-                                <fieldset>
-                                    <legend>Usuário</legend>
-                                    <div class="input-field col m7">
-                                        <i class="material-icons prefix">person</i>
-                                        <input id="first_name" type="text" class="validate">
-                                        <label for="first_name">Nome</label>
-                                    </div>
-                                    <div class="input-field col s5">
-                                        <input id="last_name" type="text" class="validate">
-                                        <label for="last_name">Sobrenome</label>
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <legend>Contato</legend>
-                                    <div class="input-field col s12">
-                                        <i class="material-icons prefix">alternate_email</i>
-                                        <input id="email" type="email" class="validate">
-                                        <label for="email">E-mail</label>
-                                        <p class="col s10 push-s2">
-                                            <label>
-                                                <input type="checkbox" />
-                                                <span>Alerta por e-mail</span>
-                                            </label>
-                                        </p>
-                                    </div>
-
-                                    <div class="input-field col s12">
-                                        <i class="material-icons prefix">phone</i>
-                                        <input id="icon_telephone" type="tel" class="validate">
-                                        <label for="icon_telephone">Telefone</label>
-                                        <p class=" col s10 push-s2">
-                                            <label>
-                                                <input type="checkbox" />
-                                                <span>Tenho Whatsapp</span>
-                                            </label>
-                                        </p>
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <legend>Endereço</legend>
-                                    <div class="input-field col s12">
-                                        <i class="material-icons prefix">home</i>
-                                        <input id="cep" type="text" class="validate">
-                                        <label for="cep">CEP</label>
-
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <button class="btn waves-effect waves-light offset-s2" type="submit" name="action">Submit
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
         <!-- SOBRE NÓS -->
